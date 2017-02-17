@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -19,11 +20,8 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
 class CalcVC: UIViewController {
-
     
-        
     @IBOutlet var menuButton: UIButton!
     
     @IBOutlet var displayResultLabel: UILabel!
@@ -55,8 +53,6 @@ class CalcVC: UIViewController {
             }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,16 +62,11 @@ class CalcVC: UIViewController {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
     
     @IBAction func numberPressed(_ sender: UIButton) {
         
         let number = sender.currentTitle!
-        //print(number)
         
         if stillTyping {
             
@@ -141,10 +132,6 @@ class CalcVC: UIViewController {
         
     }
     
-    //override func prefersStatusBarHidden() -> Bool {
-    //    return true
-   // }
-    
     @IBAction func PlusMinusButtonPressed(_ sender: UIButton) {
         currentInput = -currentInput
     }
@@ -159,7 +146,6 @@ class CalcVC: UIViewController {
         stillTyping = false
     }
     
-        
     @IBAction func DotButtonPressed(_ sender: UIButton) {
         if stillTyping && !dotIsPlaced {
             displayResultLabel.text = displayResultLabel.text! + "."
@@ -175,5 +161,4 @@ class CalcVC: UIViewController {
         
         currentInput = sqrt(currentInput)
     }
-    
 }

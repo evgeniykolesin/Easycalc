@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSCameraUsageDescription</key>
-    <string>My description about why I need this capability</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Photo Library Access Warning</string>
+	<key>NSCameraUsageDescription</key>
+	<string>My description about why I need this capability</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library Access Warning</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -36,7 +36,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Калькулятор</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.evgeniykolesin.calc</string>
+			<string>com.evgeniykolesin.calc.openCalc</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
@@ -44,7 +44,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Фото</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.evgeniykolesin.calc</string>
+			<string>com.evgeniykolesin.calc.openPhoto</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
@@ -52,7 +52,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Камера</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.evgeniykolesin.calc</string>
+			<string>com.evgeniykolesin.calc.openCam</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

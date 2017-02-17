@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -18,7 +19,6 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     return false
   }
 }
-
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
@@ -51,24 +51,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         let size = view.bounds.size
         preferredContentSize = CGSize(width: size.width, height: size.width / 2)
+        if #available(iOSApplicationExtension 10.0, *) {
+            self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
+        } else {
+        }
         
     }
-    
-    
     
     @IBAction func numberPressed(_ sender: UIButton) {
         
         let number = sender.currentTitle!
-        //print(number)
         
         if stillTyping {
             
@@ -152,7 +148,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         stillTyping = false
     }
     
-    
     @IBAction func DotButtonPressed(_ sender: UIButton) {
         if stillTyping && !dotIsPlaced {
             displayResultLabel.text = displayResultLabel.text! + "."
@@ -168,23 +163,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         currentInput = sqrt(currentInput)
     }
-
-    
-   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-
         completionHandler(NCUpdateResult.newData)
     }
     
+    @available(iOSApplicationExtension 10.0, *)
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        if activeDisplayMode == NCWidgetDisplayMode.compact {
+            self.preferredContentSize = maxSize
+        }
+        else {
+            self.preferredContentSize = CGSize(width: maxSize.width, height: 475)
+        }
+    }
 }
