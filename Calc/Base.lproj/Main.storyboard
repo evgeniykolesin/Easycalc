@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0mW-eh-xF1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0mW-eh-xF1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -160,8 +160,9 @@
         <!--Navigation Controller-->
         <scene sceneID="lsU-sy-tVW">
             <objects>
-                <navigationController toolbarHidden="NO" id="lJd-w9-l6b" sceneMemberID="viewController">
+                <navigationController id="lJd-w9-l6b" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kd3-hy-R8c">
@@ -180,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="822" y="203"/>
         </scene>
-        <!--Photo Album-->
+        <!--Фото-->
         <scene sceneID="r7K-vY-omh">
             <objects>
                 <viewController storyboardIdentifier="PhotoVC" id="Yfe-UW-V5v" customClass="PhotoVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,56 +190,55 @@
                         <viewControllerLayoutGuide type="bottom" id="4Pv-Qa-hFh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1Ey-U1-A1j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVo-87-O7D">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nbc-LK-wkd">
-                                    <size key="itemSize" width="100" height="100"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="NeR-4s-J8r" customClass="PhotoThumbnail" customModule="Calc" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-mH-SWT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <size key="customSize" width="100" height="100"/>
-                                        <connections>
-                                            <outlet property="imgView" destination="Esr-mH-SWT" id="PGX-bm-J3I"/>
-                                            <segue destination="jBe-On-hnI" kind="show" identifier="viewLargePhoto" id="d4J-0k-7fp"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-Tq-VZ8">
+                                <rect key="frame" x="12" y="520" width="350" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Gh1-yo-1Ii"/>
+                                    <constraint firstAttribute="width" constant="350" id="NrN-rr-Ras"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="31"/>
+                                <state key="normal" title="Фотопленка">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Yfe-UW-V5v" id="zpH-KJ-ff7"/>
-                                    <outlet property="delegate" destination="Yfe-UW-V5v" id="dhB-G5-NfM"/>
+                                    <action selector="openPhotoLibraryButton:" destination="Yfe-UW-V5v" eventType="touchUpInside" id="ddX-A0-kE1"/>
                                 </connections>
-                            </collectionView>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Mt-i3-gaS">
+                                <rect key="frame" x="12" y="20" width="350" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="53R-Kn-YAk"/>
+                                    <constraint firstAttribute="height" constant="490" id="ty6-rt-xYF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Pv-Qa-hFh" firstAttribute="top" secondItem="LZh-Tq-VZ8" secondAttribute="bottom" constant="19" id="507-fw-GYb"/>
+                            <constraint firstAttribute="trailing" secondItem="8Mt-i3-gaS" secondAttribute="trailing" constant="13" id="GX0-Vq-s6r"/>
+                            <constraint firstAttribute="trailing" secondItem="LZh-Tq-VZ8" secondAttribute="trailing" constant="13" id="UB7-FZ-Sfv"/>
+                            <constraint firstItem="8Mt-i3-gaS" firstAttribute="top" secondItem="tLD-QE-i0v" secondAttribute="bottom" constant="20" id="dhg-sn-ZtG"/>
+                            <constraint firstItem="LZh-Tq-VZ8" firstAttribute="leading" secondItem="1Ey-U1-A1j" secondAttribute="leading" constant="12" id="dzs-qe-o3m"/>
+                            <constraint firstItem="8Mt-i3-gaS" firstAttribute="leading" secondItem="1Ey-U1-A1j" secondAttribute="leading" constant="12" id="jZ5-os-bOr"/>
+                            <constraint firstItem="LZh-Tq-VZ8" firstAttribute="top" secondItem="8Mt-i3-gaS" secondAttribute="bottom" constant="10" id="uhy-AQ-fnv"/>
+                        </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="organize" id="WeD-rF-6Ue">
-                            <connections>
-                                <action selector="btnPhotoAlbum:" destination="Yfe-UW-V5v" id="IcN-K5-nGm"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Photo Album" id="YwW-S2-uas">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Фото" id="YwW-S2-uas">
                         <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="V4l-Ln-Tai">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xrp-qk-uTu" userLabel="menuButton">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
@@ -246,96 +246,42 @@
                                 <state key="normal" backgroundImage="menu@2x.png"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="camera" id="oTx-l5-qAm">
-                            <connections>
-                                <action selector="btnCamera:" destination="Yfe-UW-V5v" id="KUE-jm-Bes"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="collectionView" destination="AVo-87-O7D" id="8lq-lt-g0f"/>
+                        <outlet property="imagePicked" destination="8Mt-i3-gaS" id="Siv-vC-Q62"/>
                         <outlet property="menuButton" destination="xrp-qk-uTu" id="tta-9p-UDN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u13-eM-aJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="203"/>
-        </scene>
-        <!--Full-5ize-Image-->
-        <scene sceneID="amc-P5-Jp6">
-            <objects>
-                <viewController id="jBe-On-hnI" customClass="ViewPhotoVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LwE-oP-Zeh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ofi-IJ-3YL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wmN-qa-TR5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-Xm-ylR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="action" id="Zi1-Ck-a0S">
-                            <connections>
-                                <action selector="btnExport:" destination="jBe-On-hnI" id="EFh-Eo-0Ov"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="300" style="plain" systemItem="fixedSpace" id="E7b-XO-57d"/>
-                        <barButtonItem systemItem="trash" id="MzI-iM-lBM">
-                            <connections>
-                                <action selector="btnTrash:" destination="jBe-On-hnI" id="k8V-Lh-DsF"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Full-5ize-Image" id="rzd-ET-dzN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="akZ-L1-ugW">
-                            <connections>
-                                <action selector="btnCancel:" destination="jBe-On-hnI" id="22B-fm-ZHH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
-                    <connections>
-                        <outlet property="imgView" destination="ZeW-Xm-ylR" id="wES-k3-P4o"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="olf-gf-Uhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2474" y="203"/>
+            <point key="canvasLocation" x="1704.8" y="202.84857571214394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kDT-6B-wYF">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Wm6-E0-FAy" sceneMemberID="viewController">
+                <navigationController id="Wm6-E0-FAy" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oXz-Za-pdP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oXz-Za-pdP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hXD-bs-8Mf" kind="relationship" relationship="rootViewController" id="PMO-3R-Zbv"/>
+                        <segue destination="hXD-bs-8Mf" kind="relationship" relationship="rootViewController" id="Afc-PE-b6P"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmX-yT-mxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="943"/>
         </scene>
-        <!--CameraVC-->
+        <!--Камера-->
         <scene sceneID="CaO-Jm-HPS">
             <objects>
                 <viewController storyboardIdentifier="CameraVC" id="hXD-bs-8Mf" customClass="CameraVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
@@ -344,42 +290,27 @@
                         <viewControllerLayoutGuide type="bottom" id="0no-x1-XPu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9za-k1-TsE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEz-lx-A2r" userLabel="menuButton">
-                                <rect key="frame" x="8" y="30" width="40" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="2gH-GC-kGw"/>
-                                    <constraint firstAttribute="width" constant="40" id="Gbw-nD-YA4"/>
-                                    <constraint firstAttribute="width" secondItem="vEz-lx-A2r" secondAttribute="height" multiplier="8:7" id="ntq-WQ-xfy"/>
-                                </constraints>
-                                <state key="normal" image="menu@2x.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-9M-a4Y">
-                                <rect key="frame" x="12" y="583" width="160" height="64"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9CB-qh-jHe">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dq6-S5-UqQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-HQ-Heu">
-                                <rect key="frame" x="12" y="75" width="350" height="490"/>
+                                <rect key="frame" x="12" y="20" width="350" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="490" id="Io8-E0-S23"/>
+                                    <constraint firstAttribute="width" constant="350" id="yO4-Og-B1r"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgs-O6-vFG">
-                                <rect key="frame" x="12" y="583" width="350" height="64"/>
+                                <rect key="frame" x="12" y="520" width="350" height="64"/>
                                 <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="MtW-S9-oPA"/>
-                                    <constraint firstAttribute="width" secondItem="pgs-O6-vFG" secondAttribute="height" multiplier="5:2" constant="190" id="Nzb-Ng-vm2"/>
+                                    <constraint firstAttribute="height" constant="64" id="SPx-Ku-EMF"/>
+                                    <constraint firstAttribute="width" constant="350" id="ssT-nE-XCe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
                                 <state key="normal" title="Камера">
@@ -397,29 +328,35 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vEz-lx-A2r" firstAttribute="leading" secondItem="9za-k1-TsE" secondAttribute="leadingMargin" priority="999" constant="-8" id="I1Y-Nz-gha"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="top" secondItem="WoU-HQ-Heu" secondAttribute="bottom" constant="18" id="IqH-ZV-GrI"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="leading" secondItem="WoU-HQ-Heu" secondAttribute="leading" id="JLV-Vv-Kir"/>
-                            <constraint firstItem="WoU-HQ-Heu" firstAttribute="top" secondItem="vEz-lx-A2r" secondAttribute="bottom" constant="10" id="NPB-84-HNW"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="trailing" secondItem="WoU-HQ-Heu" secondAttribute="trailing" id="NiN-pN-xHs"/>
-                            <constraint firstAttribute="trailing" secondItem="Rfu-9M-a4Y" secondAttribute="trailing" constant="203" id="VA2-tO-Gxv"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="bottom" secondItem="Rfu-9M-a4Y" secondAttribute="bottom" id="YkA-df-rP4"/>
-                            <constraint firstItem="vEz-lx-A2r" firstAttribute="top" secondItem="JU6-Vy-bxf" secondAttribute="bottom" priority="999" constant="10" id="bbl-HZ-gfH"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="centerX" secondItem="9za-k1-TsE" secondAttribute="centerX" id="jgR-Eu-Rdh"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="leading" secondItem="Rfu-9M-a4Y" secondAttribute="leading" id="meu-2b-8fA"/>
-                            <constraint firstAttribute="bottom" secondItem="pgs-O6-vFG" secondAttribute="bottom" constant="20" symbolic="YES" id="tYo-bM-JfA"/>
-                            <constraint firstItem="pgs-O6-vFG" firstAttribute="top" secondItem="Rfu-9M-a4Y" secondAttribute="top" id="u8a-yh-xDy"/>
+                            <constraint firstAttribute="trailing" secondItem="pgs-O6-vFG" secondAttribute="trailing" constant="13" id="6F9-Ox-QYz"/>
+                            <constraint firstItem="WoU-HQ-Heu" firstAttribute="top" secondItem="JU6-Vy-bxf" secondAttribute="bottom" constant="20" id="CSC-0T-J3o"/>
+                            <constraint firstItem="pgs-O6-vFG" firstAttribute="leading" secondItem="9za-k1-TsE" secondAttribute="leading" constant="12" id="Ivg-5O-Cge"/>
+                            <constraint firstItem="WoU-HQ-Heu" firstAttribute="leading" secondItem="9za-k1-TsE" secondAttribute="leading" constant="12" id="cpP-xS-m3L"/>
+                            <constraint firstItem="0no-x1-XPu" firstAttribute="top" secondItem="pgs-O6-vFG" secondAttribute="bottom" constant="19" id="eOX-Sr-x9N"/>
+                            <constraint firstItem="pgs-O6-vFG" firstAttribute="top" secondItem="WoU-HQ-Heu" secondAttribute="bottom" constant="10" id="njH-5p-eSq"/>
+                            <constraint firstAttribute="trailing" secondItem="WoU-HQ-Heu" secondAttribute="trailing" constant="13" id="nmw-iA-SMn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gOU-AP-LXQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Камера" id="gOU-AP-LXQ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="gwC-hK-8aT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="JSe-UV-bbl" userLabel="menuButton">
+                                <rect key="frame" x="16" y="4" width="40" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu@2x.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="imageView" destination="WoU-HQ-Heu" id="DKI-64-N6F"/>
-                        <outlet property="menuButton" destination="vEz-lx-A2r" id="aRX-PX-MvU"/>
+                        <outlet property="menuButton" destination="JSe-UV-bbl" id="W71-av-Ovq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xs-xc-jMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

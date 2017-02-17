@@ -13,7 +13,6 @@
 		C61733381D81BABC00A264D3 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61733371D81BABC00A264D3 /* PhotoVC.swift */; };
 		C617333A1D81BAF700A264D3 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61733391D81BAF700A264D3 /* CameraVC.swift */; };
 		C625A6AA1D9A78EA006DC0B9 /* PhotoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625A6A91D9A78EA006DC0B9 /* PhotoThumbnail.swift */; };
-		C641685A1D92C5B000C0FC01 /* ViewPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64168591D92C5B000C0FC01 /* ViewPhotoVC.swift */; };
 		C67021271DD0D89200E10A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67021261DD0D89200E10A96 /* Assets.xcassets */; };
 		C6723F601D8300210099AE42 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6723F5F1D8300210099AE42 /* NotificationCenter.framework */; };
 		C6723F631D8300210099AE42 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6723F621D8300210099AE42 /* TodayViewController.swift */; };
@@ -62,7 +61,6 @@
 		C61733371D81BABC00A264D3 /* PhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		C61733391D81BAF700A264D3 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		C625A6A91D9A78EA006DC0B9 /* PhotoThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoThumbnail.swift; sourceTree = "<group>"; };
-		C64168591D92C5B000C0FC01 /* ViewPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPhotoVC.swift; sourceTree = "<group>"; };
 		C67021261DD0D89200E10A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6723F5D1D8300210099AE42 /* calcKit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = calcKit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6723F5F1D8300210099AE42 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -167,7 +165,6 @@
 				C61733371D81BABC00A264D3 /* PhotoVC.swift */,
 				C61733391D81BAF700A264D3 /* CameraVC.swift */,
 				C6EEE8881CBFF23900B4D1A3 /* AppDelegate.swift */,
-				C64168591D92C5B000C0FC01 /* ViewPhotoVC.swift */,
 				C617332E1D819A6000A264D3 /* ViewController.swift */,
 				C625A6A91D9A78EA006DC0B9 /* PhotoThumbnail.swift */,
 				C6EEE88C1CBFF23900B4D1A3 /* Main.storyboard */,
@@ -301,7 +298,6 @@
 			files = (
 				C617332F1D819A6000A264D3 /* ViewController.swift in Sources */,
 				C6EEE88B1CBFF23900B4D1A3 /* CalcVC.swift in Sources */,
-				C641685A1D92C5B000C0FC01 /* ViewPhotoVC.swift in Sources */,
 				C617333A1D81BAF700A264D3 /* CameraVC.swift in Sources */,
 				C6EEE8891CBFF23900B4D1A3 /* AppDelegate.swift in Sources */,
 				C61733361D81B1C800A264D3 /* TableVC.swift in Sources */,
@@ -421,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -459,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

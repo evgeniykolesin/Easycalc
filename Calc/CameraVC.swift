@@ -13,6 +13,7 @@ import AssetsLibrary
 class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var newMedia: Bool?
+    
     @IBOutlet var menuButton: UIButton!
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
